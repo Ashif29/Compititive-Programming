@@ -1,0 +1,1 @@
+{"name":"Local: largest word in asentence","url":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\largest word in asentence.cpp","tests":[{"id":1614019656454,"input":"17\ncode or dieeeeee","output":"8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\largest word in asentence.cpp","group":"local","local":true}

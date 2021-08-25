@@ -1,0 +1,1 @@
+{"name":"Local: sdfdb","url":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\sdfdb.cpp","tests":[{"id":1616713492067,"input":"1 2 3\n1 2 1\n3 1 2\n1 2 3\n1 2 1\n3 1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\sdfdb.cpp","group":"local","local":true}

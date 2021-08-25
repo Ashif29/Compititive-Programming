@@ -1,0 +1,1 @@
+{"name":"Local: largest word","url":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\largest word.cpp","tests":[{"id":1614021310447,"input":"12\nfuck or die","output":"4\nfuck"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\largest word.cpp","group":"local","local":true}

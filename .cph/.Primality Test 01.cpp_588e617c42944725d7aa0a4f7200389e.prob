@@ -1,0 +1,1 @@
+{"name":"Local: Primality Test 01","url":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\Primality Test 01.cpp","tests":[{"id":1615726847126,"input":"5\n2\n3\n5\n19\n24","output":"Prime\nPrime\nPrime\nPrime\nNot Prime"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\Primality Test 01.cpp","group":"local","local":true}

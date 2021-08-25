@@ -1,0 +1,1 @@
+{"name":"Local: wef","url":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\wef.cpp","tests":[{"id":1617058686401,"input":"40","output":"2 2 2 5"},{"id":1617058712924,"input":"600851475143","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\wef.cpp","group":"local","local":true}

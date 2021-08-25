@@ -1,0 +1,1 @@
+{"name":"Local: zzz","url":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\zzz.cpp","tests":[{"id":1619497913229,"input":"4","output":"    *\n   **\n  ***\n ****\n   **\n  ***\n ****\n*****"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Desktop\\CPP\\Programs\\zzz.cpp","group":"local","local":true}
