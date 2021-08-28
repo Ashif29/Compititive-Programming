@@ -25,39 +25,60 @@ typedef    unordered_map<string, int>      umap_si;
 #define    Fast ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 #define    INF                             (int)1e9
+#define    PI                              3.1415926535897932384626433832795
 #define    MOD                             1000000007
 #define    pb                              push_back
 #define    imax                            INT_MAX
 #define    imin                            INT_MIN
-#define    PI                              3.1415926535897932384626433832795
 #define    VSORT                           sort(arr.begin(), arr.end())
 #define    VRSORT                          sort(arr.rbegin(), arr.rend())
 #define    V1SORT                          sort(v1.begin(), v1.end())
 #define    V1RSORT                         sort(v1.rbegin(), v1.rend())
 
-void busted(){
-    int n; cin >> n;
-    vi arr(n);
-    for(auto &i : arr)
-        cin >> i;
-    for(int i = n - 1; i > 0; i--){
-        if(arr[i] > arr[i - 1]){
-            for(int j = i; j > 0; j--){
-                if(arr[j] < arr[j - 1]){
-                    cout << j << '\n';
-                    return;
-                }
-            }
-            cout << "0\n";
-            return;
+bool primes[100];
+int n;
+string str; 
+
+bool helper1(){
+    for(int i = 0; i < n; i++){
+        if(!primes[str[i] - '0']){
+            cout << "1\n" << str[i] << '\n';
+            return true;
         }
     }
-    cout << "0\n";
+    return false;
+}
+bool helper2(){
+    for(int i = 0; i < n; i++){
+        for(int j = i + 1; j < n; j++){
+            if(!primes[(str[i] - '0') * 10 + str[j] - '0']){
+                cout << "2\n" << str[i] << str[j] << '\n';
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+void busted(){
+    cin >> n;
+    cin >> str;
+    if(!helper1()){
+        helper2();
+    }
     return;
 }
 
 int32_t main(){
     Fast
+    for(int i = 2; i < 100; i++){
+        primes[i] = true;
+        for(int j = 2; j * j <= i; j++){
+            if(i % j == 0)
+                primes[i] = false;
+        }        
+    }
+    // for(auto i : primes) cout << i << " ";
     int tc; cin >> tc;
     while(tc--)
         busted();

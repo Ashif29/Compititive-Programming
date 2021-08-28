@@ -38,25 +38,22 @@ typedef    unordered_map<string, int>      umap_si;
 void busted(){
     int n; cin >> n;
     vi arr(n);
-    for(auto &i : arr)
-        cin >> i;
-    for(int i = n - 1; i > 0; i--){
-        if(arr[i] > arr[i - 1]){
-            for(int j = i; j > 0; j--){
-                if(arr[j] < arr[j - 1]){
-                    cout << j << '\n';
-                    return;
-                }
-            }
-            cout << "0\n";
-            return;
-        }
-    }
-    cout << "0\n";
+    for(auto &i : arr) cin >> i;
+    vi freq(n + 1, 1);
+    n = unique(arr.begin(), arr.end()) - arr.begin();
+    arr.resize(n);
+    for(int i = 0; i < n; i++)
+        freq[arr[i]]++;
+    int ans = 1e9;
+    freq[arr[0]]--;
+    freq[arr[n - 1]]--;
+    for(int i = 0; i < n; i++)
+        ans = min(ans, freq[arr[i]]);
+    cout << ans << '\n';
     return;
 }
 
-int32_t main(){
+int main(){
     Fast
     int tc; cin >> tc;
     while(tc--)

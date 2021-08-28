@@ -37,22 +37,20 @@ typedef    unordered_map<string, int>      umap_si;
 
 void busted(){
     int n; cin >> n;
-    vi arr(n);
-    for(auto &i : arr)
+    vl arr(n);
+    for(auto &i : arr) 
         cin >> i;
-    for(int i = n - 1; i > 0; i--){
-        if(arr[i] > arr[i - 1]){
-            for(int j = i; j > 0; j--){
-                if(arr[j] < arr[j - 1]){
-                    cout << j << '\n';
-                    return;
-                }
-            }
-            cout << "0\n";
-            return;
+    ll summation = 0;
+    ll maximum = arr[0];
+    for(ll i = 1; i < n; i++){
+        if(arr[i] * arr[i - 1] > 0)
+            maximum = max(maximum, arr[i]);
+        else{
+            summation += maximum;
+            maximum = arr[i];
         }
     }
-    cout << "0\n";
+    cout << summation + maximum << '\n';
     return;
 }
 

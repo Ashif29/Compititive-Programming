@@ -25,11 +25,11 @@ typedef    unordered_map<string, int>      umap_si;
 #define    Fast ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 #define    INF                             (int)1e9
+#define    PI                              3.1415926535897932384626433832795
 #define    MOD                             1000000007
 #define    pb                              push_back
 #define    imax                            INT_MAX
 #define    imin                            INT_MIN
-#define    PI                              3.1415926535897932384626433832795
 #define    VSORT                           sort(arr.begin(), arr.end())
 #define    VRSORT                          sort(arr.rbegin(), arr.rend())
 #define    V1SORT                          sort(v1.begin(), v1.end())
@@ -37,23 +37,29 @@ typedef    unordered_map<string, int>      umap_si;
 
 void busted(){
     int n; cin >> n;
-    vi arr(n);
-    for(auto &i : arr)
-        cin >> i;
-    for(int i = n - 1; i > 0; i--){
-        if(arr[i] > arr[i - 1]){
-            for(int j = i; j > 0; j--){
-                if(arr[j] < arr[j - 1]){
-                    cout << j << '\n';
-                    return;
-                }
-            }
-            cout << "0\n";
-            return;
-        }
+    int k; cin >> k;
+    if(k > n || (n % 2 == 1 && k % 2 == 0)){
+        cout << "NO\n";
+        return;
     }
-    cout << "0\n";
-    return;
+    int remaining = n - k;
+    if(remaining % 2 == 0){
+        cout << "YES\n";
+        for(int i = 1; i < k; i++)
+            cout << "1 ";
+        cout << remaining + 1 << '\n';
+        return;
+    }
+    remaining = n - k * 2;
+    if(remaining % 2 == 0 && remaining >= 0){
+        cout << "YES\n";
+        for(int i = 1; i < k; i++)
+            cout << "2 ";
+        cout << remaining + 2 << '\n';
+        return;
+    }
+    cout << "NO\n";
+return;
 }
 
 int32_t main(){
