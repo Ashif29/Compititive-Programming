@@ -1,6 +1,6 @@
 /**
  *    author:  Asif
- *    created: 23.02.2021 07:14:25
+ *    created: 23.02.2021 06:10:35
 **/
 #include<bits/stdc++.h>
 #define ll long long int
@@ -15,8 +15,8 @@ int main()
     int tc; cin >> tc;
     while(tc--)
     {
-        int n, m, r, c; cin >> n >> m >> r >> c;
-        cout << max(r-1, n-r) + max(c-1, m-c) << endl;
+        string s; cin >> s;
+        cout << s.length() <<endl;
     }
     return 0;
 }
